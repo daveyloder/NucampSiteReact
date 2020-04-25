@@ -37,14 +37,17 @@ class CampsiteInfo extends Component {
         }  return <div/>; 
     }
     render(){
-        if(this.props.campsite === null) { 
-            return <div></div>;
-        } else {
-            return <div className="row">
-                {this.renderCampsite(this.props.campsite)}
-                {this.renderComment(this.props.campsite.comments)}
-            </div>;
+        if(this.props.campsite) {
+            return (
+                <div className = "container">
+                    <div className="row">
+                    {this.renderCampsite(this.props.campsite)}
+                    {this.renderComment(this.props.campsite.comments)}
+                    </div>
+                </div>
+            );
         }
+        return <div />;
     }
 }
 
