@@ -22,8 +22,6 @@ class Contact extends Component {
                 email: false
             }
         };
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     validate(firstName, lastName, phoneNum, email) {
@@ -119,7 +117,7 @@ class Contact extends Component {
                       <hr />
                    </div>
                     <div className="col-md-10">
-                        <LocalForm onSubmit={values => this.handleSubmit(values)}>
+                    <LocalForm onSubmit={values => this.handleSubmit(values)}>
                             <Row className="form-group">
                                 <Label htmlFor="firstName" md={2}>First Name</Label>
                                 <Col md={10}>
@@ -136,13 +134,13 @@ class Contact extends Component {
                                         placeholder="Last Name"
                                         className="form-control"
                                     />
-                                </Col>                        
+                                </Col>
                             </Row>
                             <Row className="form-group">
                                 <Label htmlFor="phoneNum" md={2}>Phone</Label>
                                 <Col md={10}>
                                     <Control.text model=".phoneNum" id="phoneNum" name="phoneNum"
-                                        placeholder="Phone Number"
+                                        placeholder="Phone number"
                                         className="form-control"
                                     />
                                 </Col>
@@ -174,16 +172,16 @@ class Contact extends Component {
                                         className="form-control">
                                         <option>By Phone</option>
                                         <option>By Email</option>
-                                        </Control.select>
+                                    </Control.select>
                                 </Col>
                             </Row>
-                            <Row className="form-control">
+                            <Row className="form-group">
                                 <Label htmlFor="feedback" md={2}>Your Feedback</Label>
                                 <Col md={10}>
-                                   <Control.textarea model=".feedback" id="feedback" name="feedback"
+                                    <Control.textarea model=".feedback" id="feedback" name="feedback"
                                         rows="12"
                                         className="form-control"
-                                    /> 
+                                    />
                                 </Col>
                             </Row>
                             <Row className="form-group">
