@@ -82,7 +82,7 @@ class Contact extends Component {
         });
     }
 
-    handlesSubmit(values) {
+    handleSubmit(values) {
         console.log("Current state is: " + JSON.stringify(values));
         alert("Current state is: " + JSON.stringify(values));
     }
